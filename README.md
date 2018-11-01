@@ -6,3 +6,10 @@ review https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_dock
 
 Papertrail Integration
 https://help.papertrailapp.com/kb/configuration/configuring-centralized-logging-from-docker/#logspout
+
+
+docker run --restart=always -d \
+    -v=/var/run/docker.sock:/var/run/docker.sock gliderlabs/logspout  \
+    syslog+tls://logsN.papertrailapp.com:XXXXX
+
+ logs7.papertrailapp.com:33346    
